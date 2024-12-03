@@ -20,4 +20,4 @@ def main(inp):
 
 if __name__ == "__main__":
     print("hi")
-    main(hi)
+    main(txt)
