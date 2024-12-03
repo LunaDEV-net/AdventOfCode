@@ -9,8 +9,8 @@ def main(inp):
     all_mul = re.findall(q, inp)
     for mul in all_mul:
         mul = re.split(r",", mul)
-        left = re.findall(r"\d", mul[0])
-        right = re.findall(r"\d", mul[1])
+        left = int("".join(re.findall(r"\d", mul[0])))
+        right = int("".join(re.findall(r"\d", mul[1])))
         print(left, right)
         data.append([left])
         print(mul)
