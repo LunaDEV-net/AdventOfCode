@@ -6,6 +6,7 @@ def main(inp):
     q = r"mul\(\d+,\d+\)"
     all_mul = re.findall(q, inp)
     for mul in all_mul:
+        re.split(r",", mul)
         print(mul)
 
 if __name__ == "__main__":
