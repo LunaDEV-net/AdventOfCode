@@ -11,9 +11,8 @@ def main(inp):
         mul = re.split(r",", mul)
         left = int("".join(re.findall(r"\d", mul[0])))
         right = int("".join(re.findall(r"\d", mul[1])))
-        print(left, right)
-        data.append([left])
-        print(mul)
+        data.append([left,right])
+        print(data)
 
 if __name__ == "__main__":
     print("hi")
