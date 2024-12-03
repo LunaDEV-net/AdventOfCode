@@ -8,5 +8,6 @@ def main(inp):
   for mul in all_mul:
     print(mul)
 
-if __name__ == "__main__":
+if __name__ == "__main__":m 
+  print("hi")
   main(txt)
