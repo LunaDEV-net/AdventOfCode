@@ -5,7 +5,8 @@ def load_input_file(path="input.txt"):
         return f.read()
 
 def main():
-    ergebnis_liste = []
+    differenz_liste = []
+    simi_liste = []
     data={"l": [], "r": []}
     data_in = load_input_file()
     # Split the Line into to numbers
@@ -22,13 +23,25 @@ def main():
 
     for i in range(0, len(data["l"])):
         differenz = abs(data["l"][i] - data["r"][i])
-        ergebnis_liste.append(differenz)
+        differenz_liste.append(differenz)
 
-    ergebnis = 0
-    for zahl in ergebnis_liste:
-        ergebnis += zahl
+    for i in range(0, len(data["l"])):
+        left = data["l"][i]
+        matches = [x for x in data["r"] if left == x]
+        similarity_score = left * len(matches)
+        simi_liste.append(similarity_score)
 
-    print(ergebnis)
+
+    ergebnis_differenz = 0
+    for zahl in differenz_liste:
+        ergebnis_differenz += zahl
+
+    simil_ergbnis = 0
+    for zahl in simi_liste:
+        simil_ergbnis += zahl
+
+    print(ergebnis_differenz)
+    print(simil_ergbnis)
 
 if __name__ == '__main__':
     main()
